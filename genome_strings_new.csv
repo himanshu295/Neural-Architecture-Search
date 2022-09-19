@@ -1,0 +1,21 @@
+genome
+RC 10 3 tanh;NC 20 3 relu;RC 10 3 tanh;FL relu;
+RC 10 3 tanh;NC 20 3 sigmoid;RC 10 3 tanh;FL relu;
+RC 10 3 tanh;NC 20 3 tanh;RC 10 3 tanh;FL sigmoid;
+NC 64 1 tanh;NC 64 1 gelu;RC 128 3 tanh;NC 128 1 gelu;RC 128 3 gelu;FL relu;
+NC 64 1 relu;NC 64 3 gelu;NC 64 1 gelu;RC 128 3 relu;NC 128 1 relu;RC 256 3 gelu;FL relu;
+NC 64 1 relu;NC 64 3 relu;NC 64 1 relu;RC 128 3 relu;NC 128 3 relu;RC 256 3 relu;FL relu;
+RC 10 3 tanh;NC 20 3 tanh;RC 10 3 tanh;FL tanh;
+RC 10 3 gelu;NC 20 3 gelu;RC 10 3 gelu;FL relu;
+RC 128 3 tanh;NC 128 3 tanh;RC 64 3 tanh;FL tanh;
+RC 64 3 gelu;NC 64 3 gelu;RC 128 3 gelu;FL relu;
+RC 128 3 tanh;NC 64 3 tanh;RC 64 3 tanh;FL sigmoid;
+NC 256 3 tanh;RC 256 3 sigmoid;RC 64 3 gelu;FL relu;
+NC 32 1 tanh;NC 32 3 gelu;NC 64 1 gelu;RC 64 3 tanh;NC 64 1 gelu;NC 128 3 tanh;NC 128 1 gelu;RC 256 3 gelu;FL relu;
+NC 64 1 relu;NC 128 3 gelu;RC 128 3 relu;NC 512 1 relu;NC 512 3 gelu;RC 256 3 gelu;FL relu;
+NC 64 1 relu;RC 128 3 relu;NC 256 3 relu;NC 128 1 relu;RC 512 3 relu;FL relu;
+RC 10 3 sigmoid;NC 20 3 sigmoid;RC 10 3 sigmoid;FL sigmoid;
+NC 64 1 relu;RC 128 3 relu;NC 128 1 relu;NC 128 3 gelu;NC 128 1 relu;RC 256 3 gelu;FL relu;
+RC 5 3 tanh;NC 64 3 tanh;RC 64 3 tanh;FL sigmoid;
+RC 10 3 sigmoid;NC 10 3 sigmoid;RC 10 3 sigmoid;FL sigmoid;
+NC 64 1 relu;RC 64 relu;NC 128 1 relu;NC 128 3 gelu;NC 128 1 relu;RC 256 3 gelu;FL relu;
